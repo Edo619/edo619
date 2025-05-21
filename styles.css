@@ -18,10 +18,10 @@ body{
     transition: transform 0.5s;
 }
 #middleDoor:hover ~ #rightDoor{
-    transform: translate(40px, 0px);
+    transform: translate(6vw, 0px);
 }
 #middleDoor:hover ~ #leftDoor{
-    transform: translate(-40px, 0px);
+    transform: translate(-6vw, 0px);
 }
 #leftTitle{
     transform: translate(-50%,-100%);
