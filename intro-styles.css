@@ -39,6 +39,9 @@ body{
 .Door > h1{
     transition: transform 1s;
 }
+#middleDoor:hover{
+    cursor: pointer;
+}
 #middleDoor:hover ~ #rightDoor{
     transform: translate(6vw, 0px);
 }

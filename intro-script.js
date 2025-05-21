@@ -2,6 +2,7 @@ var socials = document.getElementById("socialsDiv");
 var leftClips = document.getElementsByClassName("LeftClip");
 var rightClips = document.getElementsByClassName("RightClip");
 var bottomIntroText = document.getElementsByClassName("BottomIntroText");
+var middleDoor = document.getElementById("middleDoor");
 
 function breakIntro(){
     
@@ -16,6 +17,7 @@ function breakIntro(){
     removeIntroElements();
 }
 function removeIntroElements() {
+    middleDoor.style.display = "none";
     setTimeout(function(){
         socials.style.display = "none";
         for (var i = 0; i < leftClips.length; i++) {
@@ -25,6 +27,7 @@ function removeIntroElements() {
         for (var i = 0; i < bottomIntroText.length; i++) {
             bottomIntroText[i].style.display = "none";
         }
+    window.location.href = "index.html";
     }
     , 1000);
 }
