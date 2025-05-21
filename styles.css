@@ -20,7 +20,7 @@ body{
     transition: all 0.5s;
 }
 .SocialButton:hover{
-    transform: scale(1.2);
+    transform: scale(1.25);
 }
 .SocialParagraph{
     user-select: none;
