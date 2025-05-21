@@ -14,13 +14,15 @@ body{
 .SocialButton{
     position: relative;
     z-index: 3;
-    width: 50px;
-    height: 50px;
-    left: 25px;
+    width: 35px;
+    height: 35px;
     transition: all 0.5s;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .SocialButton:hover{
-    transform: scale(1.25);
+    transform: scale(1.2);
 }
 .SocialParagraph{
     user-select: none;
@@ -29,7 +31,7 @@ body{
     color: white;
     font-family: 'Japanese3017';
     text-align: center;
-    margin-right: 96.5%;
+    /*transform: translate(50%, 0);*/
 }
 .Door > img{
     transition: transform 0.5s;
