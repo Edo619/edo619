@@ -8,27 +8,27 @@
         
     </head>
     <body>
-            <div class="Door">
-                <img id="middleDoor" src="images/transparent.png" alt="Transparent Image" style="height: 25%; width: 25%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 3;">
+            <div id="doorDiv" class="Door">
+                <img onclick="breakIntro()" id="middleDoor" src="images/transparent.png" alt="Transparent Image" style="height: 25%; width: 25%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 3;">
                 <img  class="RightClip" id="rightDoor" src="images/door.png" alt="Door Image" style="height: 100%; width: 110%; margin-left: -5%; position: absolute; top: 0; left: -1px; z-index: 0;">
                 <img  class="LeftClip" id="leftDoor" src="images/door.png" alt="Door Image" style="height: 100%; width: 110%; margin-left: -1px; position: absolute; top: 0; left: 1px; z-index: 0;">
                 <h1 class="LeftClip" id="leftTitle" style="user-select: none; position: absolute; top:50%; left: 50%; text-align: center; z-index: 2; font-family: 'Japanese3017'; font-size: 10vw; color: white;">EDO</h1>
                 <h1 class="RightClip" id="rightTitle" style="user-select: none; position: absolute; top:50%; left: 50%; text-align: center; z-index: 2; font-family: 'Japanese3017'; font-size: 10vw; color: white;">EDO</h1>
                 <h1 class="LeftClip" id="leftNumber" style="user-select: none; position: absolute; top:50%; left: 50%; text-align: center; z-index: 1; font-family: 'Japanese3017'; font-size: 10vw; color: red;">619</h1>
                 <h1 class="RightClip" id="rightNumber" style="user-select: none; position: absolute; top:50%; left: 50%; text-align: center; z-index: 1; font-family: 'Japanese3017'; font-size: 10vw; color: red;">619</h1>
-                <p style="user-select: none; position:absolute; top:60%; left:50%; transform: translate(-50%, -50%); z-index: 2; color: white; font-family: 'Japanese3017'; font-size: 1.1vw;">Software Developer Portfolio</p>
-                <p style="user-select: none; position:absolute; top:60%; left:50%; transform: translate(-49.5%, -50%); z-index: 1; color: red; font-family: 'Japanese3017'; font-size: 1.1vw;">Software Developer Portfolio</p>
+                <p class="BottomIntroText" style="user-select: none; position:absolute; top:60%; left:50%; transform: translate(-50%, -50%); z-index: 2; color: white; font-family: 'Japanese3017'; font-size: 1.1vw;">Software Developer Portfolio</p>
+                <p class="BottomIntroText" style="user-select: none; position:absolute; top:60%; left:50%; transform: translate(-49.5%, -50%); z-index: 1; color: red; font-family: 'Japanese3017'; font-size: 1.1vw;">Software Developer Portfolio</p>
             </div>
-            <div class="Socials" style="padding-top: 15px; margin-right: 95%;">
-                <a href="https://github.com/Edo619" target="_blank"><img class="SocialButton" src="images/GithubLogo.jpg"></a>
+            <div id="socialsDiv" class="Socials" style="padding-top: 15px; width: 100px;">
+                <a href="https://github.com/Edo619" target="_blank"><img class="SocialButton" alt="Github" src="images/GithubLogo.jpg"></a>
                 <p class="SocialParagraph">Github</p>
-                <a href="https://www.fiverr.com/dev_edo" target="_blank"><img class="SocialButton" src="images/FiverrLogo.jpg"></a>
+                <a href="https://www.fiverr.com/dev_edo" target="_blank"><img class="SocialButton" alt="Fiverr" src="images/FiverrLogo.jpg"></a>
                 <p class="SocialParagraph">Fiverr</p>
-                <a href="https://www.youtube.com/@edo619coding" target="_blank"><img class="SocialButton" src="images/YoutubeLogo.png"></a>
+                <a href="https://www.youtube.com/@edo619coding" target="_blank"><img class="SocialButton" alt="Youtube" src="images/YoutubeLogo.png"></a>
                 <p class="SocialParagraph">Youtube</p>
-                <a href="mailto:edo619.coding@gmail.com" target="_blank"><img class="SocialButton" src="images/EmailLogo.jpg"></a>
+                <a href="mailto:edo619.coding@gmail.com" target="_blank"><img class="SocialButton" alt="Mail" src="images/EmailLogo.jpg"></a>
                 <p class="SocialParagraph">Email</p>
             </div>
-            
+            <script src="intro-script.js"></script>
     </body>
 </html>
