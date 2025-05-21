@@ -11,6 +11,26 @@ body{
     overflow-x: hidden;
     overflow-y: hidden;
 }
+.SocialButton{
+    position: relative;
+    z-index: 3;
+    width: 50px;
+    height: 50px;
+    left: 25px;
+    transition: all 0.5s;
+}
+.SocialButton:hover{
+    transform: scale(1.2);
+}
+.SocialParagraph{
+    user-select: none;
+    position: relative;
+    z-index: 3;
+    color: white;
+    font-family: 'Japanese3017';
+    text-align: center;
+    margin-right: 96.5%;
+}
 .Door > img{
     transition: transform 0.5s;
 }
