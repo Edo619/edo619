@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Japanese3017';
+  src: url('fonts/Japanese 3017.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Makisupa';
+  src: url('fonts/MAKISUPA.TTF') format('truetype');
+}
+body{
+    margin:auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.Door > img{
+    transition: transform 0.5s;
+}
+.Door > h1{
+    transition: transform 0.5s;
+}
+#middleDoor:hover ~ #rightDoor{
+    transform: translate(40px, 0px);
+}
+#middleDoor:hover ~ #leftDoor{
+    transform: translate(-40px, 0px);
+}
+#leftTitle{
+    transform: translate(-50%,-100%);
+}
+#rightTitle{
+    transform: translate(-50%,-100%);
+}
+#middleDoor:hover ~ #leftTitle{
+    transform: translate(-50%, -100%) translate(-30%,0%);
+}
+#middleDoor:hover ~ #rightTitle{
+    transform: translate(-50%, -100%) translate(30%,0%);
+}
+#leftNumber{
+    transform: translate(-50%,-100%);
+}
+#rightNumber{
+    transform: translate(-50%,-100%);
+}
+#middleDoor:hover ~ #leftNumber{
+    transform: translate(-50%, -100%) translate(-1%,0);
+}
+#middleDoor:hover ~ #rightNumber{
+    transform: translate(-50%, -100%) translate(1%,0);
+}
+.RightClip{
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+.LeftClip{
+    clip-path: polygon(101.5% 0, 0 0, 0 101.5%);
+}
