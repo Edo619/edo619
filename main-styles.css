@@ -63,7 +63,7 @@ font-size: 18px;
   bottom:-11px;
   transform: translateX(-50%);
   white-space: nowrap;
-  animation: scroll-left 20s linear infinite;
+  animation: scroll-left 5s linear infinite;
 }
 
 @keyframes scroll-left {
