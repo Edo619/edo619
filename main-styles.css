@@ -7,15 +7,26 @@
   src: url('fonts/MAKISUPA.TTF') format('truetype');
 }
 
+canvas { 
+  position:fixed; 
+  top:0; 
+  left:0; 
+  width:100%; 
+  height:100%; 
+  display:block; 
+}
+
 body {
   margin-top: 20px;
-  background: white;
+  background-color: white;
+  background-size: cover;
   transition: background-color .5s ease;
   overflow-x: hidden;
+  height:100%;
 }
 
 body.loaded {
-  background: black;
+  background-color: black;
 }
 
 header {
@@ -24,7 +35,7 @@ header {
   left: 0;
   width: 100%;
   height: 80px;
-  background: rgb(255, 0, 0);
+  background: rgba(150,0,0,1);
   transition: top .5s ease;
   z-index: 10;
 }
@@ -42,14 +53,18 @@ position: fixed;
 bottom: 0;
 left: 0;
 width: 100%;
-height: 25px;
-background: rgb(255, 0, 0);
-background-image: url('images/footer-pattern.jpg');
+height: 0px;
+background: rgba(150,0,0,1);
 color: white;
 display: flex;
 justify-content: center;
 align-items: center;
 font-size: 18px;
+transition: height .5s ease;
+}
+
+body.loaded footer{
+  height: 25px;
 }
 
 .footer-text {
@@ -59,19 +74,54 @@ font-size: 18px;
 
 .footer-text p {
   margin: 0;
-  position: absolute;
-  left: 50%;
+  position: relative;
   bottom:-11px;
-  transform: translateX(-50%);
   white-space: nowrap;
-  animation: scroll-left 30s linear infinite;
+  animation: floatControl 20s infinite;
 }
 
-@keyframes scroll-left {
-  0% {
-    transform: translateX(100vw);
+@keyframes floatControl {
+    /* Fade in (from below to position) */
+    0% {
+      transform: translate(-100vw, -10.5px);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.5;
+    }
+    15% {
+      transform: translate(0px, -10.5px);
+      opacity: 1;
+    }
+
+    /* Stay in place fully visible */
+    50% {
+      transform: translate(0px, -10.5px);
+      opacity: 1;
+    }
+
+    /* Fade out (move downward) */
+    85% {
+      transform: translate(0px, 50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0px, 50px);
+      opacity: 0;
+    }
   }
-  100% {
-    transform: translateX(-100vw);
+
+  #rightArrow {
+    position: fixed;
+    top: 50%;              /* vertically centered */
+    right: 20px;           /* distance from right edge */
+    width: 50px;           /* adjust size */
+    height: 50px;
+    cursor: pointer;
+    transform: translateY(-50%); /* truly center vertically */
+    transition: transform 0.2s;
   }
-}
+
+  #rightArrow:hover {
+    transform: translateY(-50%) scale(1.2); /* slightly enlarge on hover */
+  }
