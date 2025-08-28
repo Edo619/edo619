@@ -27,7 +27,7 @@ function removeIntroElements() {
         for (var i = 0; i < bottomIntroText.length; i++) {
             bottomIntroText[i].style.display = "none";
         }
-    window.location.href = "index.html";
+    window.location.href = "main.html";
     }
-    , 1000);
+    , 550);
 }
