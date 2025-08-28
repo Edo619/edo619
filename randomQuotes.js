@@ -7,7 +7,7 @@ scrollText.addEventListener('animationiteration', () => {
   .then(quotes => {
     let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
     console.log(`${randomQuote.quote} — ${randomQuote.movie}`);
+    scrollText.textContent = (`${randomQuote.quote} — ${randomQuote.movie}`);
   });
   
-  scrollText.textContent = (`${randomQuote.quote} — ${randomQuote.movie}`);
 });
